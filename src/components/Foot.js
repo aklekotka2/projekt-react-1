@@ -13,18 +13,3 @@ const Foot = () => {
 };
 
 export default Foot;
-
-// import NavList from "./NavList";
-
-// const Footer = () => {
-// 	return (
-// 		<header>
-// 			<div className="pos-center">
-// 				<div className="logo">nazwa firmy</div>
-// 				<NavList></NavList>
-// 			</div>
-// 		</header>
-// 	);
-// };
-
-// export default Footer;

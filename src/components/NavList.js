@@ -1,13 +1,13 @@
+import navLinks from "../data/navLinks";
+
 const NavList = () => {
 	return (
 		<nav className="nav-desktop">
-			<a href="#aboutUs">o nas</a>
-			<a href="#offer" disabled="false">
-				oferta
-			</a>
-			<a href="#kontakt" disabled>
-				kontakt
-			</a>
+			{navLinks.map(({ name, link, isDisabled }, id) => (
+				<a href={link} disabled={isDisabled && "disabled"} key={id}>
+					{name}
+				</a>
+			))}
 		</nav>
 	);
 };
