@@ -1,4 +1,5 @@
 import offers from "../data/OfferList";
+import SingleOffer from "./SingleOffer";
 
 const Offer = () => {
 	return (
@@ -7,12 +8,11 @@ const Offer = () => {
 				<h3>Czym zajmuje się nasza firma?</h3>
 				<div className="offer-wrapper">
 					{offers.map(({ title, isNew }, id) => (
-						<div className={isNew ? "box is-new" : "box"} key={id}>
-							<p>
-								{title}
-								{isNew ? <span>(nowość)</span> : ""}
-							</p>
-						</div>
+						<SingleOffer
+							title={title}
+							isNew={isNew}
+							key={id}
+						></SingleOffer>
 					))}
 				</div>
 			</div>
